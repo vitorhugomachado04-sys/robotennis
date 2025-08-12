@@ -1,6 +1,6 @@
 {
-  "name": "Tênis 3D",
-  "short_name": "Tennis 3D",
+  "name": "RoboTennis",
+  "short_name": "RoboTennis",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

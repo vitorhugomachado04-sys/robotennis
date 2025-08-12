@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tennis3d-pwa-easy-v1';
+const CACHE_NAME = 'robotennis-pwa-v1';
 const ASSETS = [
   './',
   './index.html',
@@ -7,7 +7,6 @@ const ASSETS = [
   './icons/icon-512.png',
   'https://unpkg.com/three@0.160.0/build/three.min.js'
 ];
-
 self.addEventListener('install', (e) => {
   e.waitUntil((async () => {
     const cache = await caches.open(CACHE_NAME);
@@ -15,7 +14,6 @@ self.addEventListener('install', (e) => {
     self.skipWaiting();
   })());
 });
-
 self.addEventListener('activate', (e) => {
   e.waitUntil((async () => {
     const keys = await caches.keys();
@@ -23,7 +21,6 @@ self.addEventListener('activate', (e) => {
     self.clients.claim();
   })());
 });
-
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
   e.respondWith((async () => {
